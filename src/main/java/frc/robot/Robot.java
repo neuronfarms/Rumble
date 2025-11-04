@@ -27,5 +27,10 @@ public class Robot extends TimedRobot {
     m_hid.setRumble(RumbleType.kRightRumble, 0.0);
   }
 
+  public void simulationPeriodic() {
+    double scaler = Math.abs(m_hid.getRawAxis(5));
+    m_hid.setRumble(RumbleType.kLeftRumble, scaler);
+    m_hid.setRumble(RumbleType.kRightRumble, scaler);
 
+  }
 }
