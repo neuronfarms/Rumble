@@ -17,7 +17,7 @@ public class Robot extends TimedRobot {
     // Turn on rumble at the start of auto
     System.out.println("lets get ready to rumble");
     //m_hid.setRumble(RumbleType.kLeftRumble, 1.0);
-    m_hid.setRumble(RumbleType.kRightRumble, 1.0);
+    //m_hid.setRumble(RumbleType.kRightRumble, 1.0);
   }
 
   @Override
@@ -31,6 +31,5 @@ public class Robot extends TimedRobot {
     double scaler = Math.abs(m_hid.getRawAxis(5));
     m_hid.setRumble(RumbleType.kLeftRumble, scaler);
     m_hid.setRumble(RumbleType.kRightRumble, scaler);
-
   }
 }
